@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { passwordService } from './services/passwordService';
 import { RoomateformComponent } from './roomateform/roomateform.component';
 import { PasswordComponent } from './password/password.component';
+import { RoomatetabsComponent } from './roomatetabs/roomatetabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomateformComponent,
-    PasswordComponent
+    PasswordComponent,
+    RoomatetabsComponent
   ],
   imports: [
     BrowserModule,
