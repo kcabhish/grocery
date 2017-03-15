@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./password.component.css']
 })
 export class PasswordComponent implements OnInit {
-
+  passwordModel={
+    "username":"",
+    "password1":"",
+    "password2":""
+  }
   constructor() { }
 
   ngOnInit() {

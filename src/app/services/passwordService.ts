@@ -37,12 +37,10 @@ export class passwordService{
         for(let i=0;i<this.validUsers.length;i++){
             if (this.passwordModel.userName === this.validUsers[i].userName && this.passwordModel.password === this.validUsers[i].password){
                 temp=true;
-               // this.setAuthenticate(true);
                 break;   
             }
         }
         this.setAuthenticate(temp);
-        //this.setAuthenticate(false);
     }
     logout=()=>this.setAuthenticate(false);
 
