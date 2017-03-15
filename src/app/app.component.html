@@ -1,8 +1,8 @@
 <form (submit)="validateUser()" id="login-form">
   <div *ngIf="!authenticate" class="container password-form">
-    <h3>Ghanta App</h3>
+    <h3>Billing Buddy</h3>
     <div class="row">
-        <md-input-container>
+        <md-input-container >
           <input mdInput placeholder="Enter username" name="username" [(ngModel)]="passwordModel.userName">
         </md-input-container>
         
@@ -20,4 +20,6 @@
   </div>
 </form>
 
-<app-roomatetabs *ngIf="authenticate"></app-roomatetabs>
+<app-roomatetabs *ngIf="authenticate">
+  <md-spinner></md-spinner>
+</app-roomatetabs>

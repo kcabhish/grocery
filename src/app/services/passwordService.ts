@@ -33,6 +33,8 @@ export class passwordService{
     getUserName=()=>this.passwordModel.userName;
     getPassword=()=>this.passwordModel.password;
     checkPassword=()=>{
+        console.log("FROM SERVICE");
+        console.log(this.validUsers);
         var temp=false;
         for(let i=0;i<this.validUsers.length;i++){
             if (this.passwordModel.userName === this.validUsers[i].userName && this.passwordModel.password === this.validUsers[i].password){
@@ -43,6 +45,9 @@ export class passwordService{
         this.setAuthenticate(temp);
     }
     logout=()=>this.setAuthenticate(false);
+    addUser=(userModel)=>{
+        this.validUsers.push(userModel);
+    }
 
     constructor(){
         
