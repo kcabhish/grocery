@@ -1,4 +1,4 @@
-<form (submit)="validateUser()">
+<form (submit)="validateUser()" id="login-form">
   <div *ngIf="!authenticate" class="container password-form">
     <h3>Ghanta App</h3>
     <div class="row">
@@ -14,7 +14,7 @@
        
     </div>
     <div class="row">
-      <span>Create Account</span>
+      <span><create-account></create-account></span>
       <button class="btn btn-success" (click)="validateUser()">Login</button>
     </div>   
   </div>

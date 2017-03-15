@@ -8,14 +8,17 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { passwordService } from './services/passwordService';
 import { RoomateformComponent } from './roomateform/roomateform.component';
-import { PasswordComponent } from './password/password.component';
+import { PasswordComponent,passwordDialog } from './password/password.component';
 import { RoomatetabsComponent } from './roomatetabs/roomatetabs.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomateformComponent,
+    passwordDialog,
     PasswordComponent,
+    
     RoomatetabsComponent
   ],
   imports: [
@@ -26,6 +29,9 @@ import { RoomatetabsComponent } from './roomatetabs/roomatetabs.component';
   ],
   providers: [passwordService],
   bootstrap: [AppComponent],
+  entryComponents: [
+    passwordDialog
+  ]
   
 })
 export class AppModule { }

@@ -3,6 +3,11 @@
     /*background-color:lightslategrey;*/
     padding:2vh 5vw 5vh 5vw ;
     width:auto;
+    border:inset black;
+    border-top-left-radius:25%;
+    box-shadow: 10px 10px 5px #888888;
+    border-right:none;
+    border-bottom:none;
 }
 .password-form label{
     margin-top:2vh;
