@@ -19,7 +19,6 @@ import { RoomatetabsComponent } from './roomatetabs/roomatetabs.component';
     RoomateformComponent,
     passwordDialog,
     PasswordComponent,
-    
     RoomatetabsComponent
   ],
   imports: [
@@ -28,7 +27,7 @@ import { RoomatetabsComponent } from './roomatetabs/roomatetabs.component';
     HttpModule,
     MaterialModule
   ],
-  providers: [passwordService],
+  providers: [passwordService,roomateService],
   bootstrap: [AppComponent],
   entryComponents: [
     passwordDialog

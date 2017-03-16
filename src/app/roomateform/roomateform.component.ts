@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { passwordService } from '../services/passwordService';
+import { roomateService } from '../services/roomateService';
+
 
 @Component({
   selector: 'app-roomateform',
@@ -16,7 +18,7 @@ export class RoomateformComponent implements OnInit {
   };
 
   add=()=>{
-    console.log(this.roomateModel);
+    this._roomateService.addRoomate(this.roomateModel);
     this.roomateModel={
       "firstName":"",
       "lastName":"",
@@ -24,15 +26,13 @@ export class RoomateformComponent implements OnInit {
       "email":"" 
     };
   }
-  logout=()=>{
-    this._passwordService.setAuthenticate(false);
-  }
-  constructor(private _passwordService:passwordService) { 
-    this._passwordService.authUpdated.subscribe(
-      (authenticate)=>{
-        this.authenticate = this._passwordService.getAuthenticate();
-      }
-    );
+  
+  constructor(private _roomateService:roomateService/*private _passwordService:passwordService*/) { 
+    // this._passwordService.authUpdated.subscribe(
+    //   (authenticate)=>{
+    //     this.authenticate = this._passwordService.getAuthenticate();
+    //   }
+    // );
   }
   
 
