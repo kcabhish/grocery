@@ -7,6 +7,7 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { passwordService } from './services/passwordService';
+import { roomateService } from './services/roomateService';
 import { RoomateformComponent } from './roomateform/roomateform.component';
 import { PasswordComponent,passwordDialog } from './password/password.component';
 import { RoomatetabsComponent } from './roomatetabs/roomatetabs.component';

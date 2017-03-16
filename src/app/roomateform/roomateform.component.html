@@ -1,1 +1,15 @@
-<!--Add Forms Here-->
+<div style="display:flex;flex-direction: column">
+    <md-input-container>
+        <input type="text" required mdInput name="firstName" [(ngModel)]="roomateModel.firstName" placeholder="Enter First Name">
+    </md-input-container>
+    <md-input-container>
+        <input type="text" mdInput required name="lastName" [(ngModel)]="roomateModel.lastName" placeholder="Enter Last Name">
+    </md-input-container>
+    <md-input-container>
+        <input type="text" required mdInput name="phone" [(ngModel)]="roomateModel.phone" placeholder="Enter Phone">
+    </md-input-container>
+    <md-input-container>
+        <input type="email" required mdInput name="email" [(ngModel)]="roomateModel.email" placeholder="Enter Email">
+    </md-input-container>
+    <button class="btn btn-success" (click)="add()">Add</button>
+</div>

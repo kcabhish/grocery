@@ -8,6 +8,22 @@ import { passwordService } from '../services/passwordService';
 })
 export class RoomateformComponent implements OnInit {
   authenticate:Boolean;
+  roomateModel={
+     "firstName":"",
+     "lastName":"",
+     "phone":"",
+     "email":""    
+  };
+
+  add=()=>{
+    console.log(this.roomateModel);
+    this.roomateModel={
+      "firstName":"",
+      "lastName":"",
+      "phone":"",
+      "email":"" 
+    };
+  }
   logout=()=>{
     this._passwordService.setAuthenticate(false);
   }
